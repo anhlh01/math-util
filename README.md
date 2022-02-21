@@ -11,4 +11,4 @@
 ##### © learning2html 2022
 
 ### Screenshots: 
-![](https://github.com/learning2html/math-util/blob/main/screenshot/DDT-with-TDD-using-JUnit.png)
+![Source code for TDD/DDT using JUnit](https://github.com/learning2html/math-util/blob/main/screenshot/DDT-with-TDD-using-JUnit.png)
