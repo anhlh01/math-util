@@ -1,0 +1,39 @@
+ngày nay, thuê máy, mượn máy từ xa - dùng máy ảo từ xa do các nhà cung cấp dịch vụ mạng người ta cung cấp
+GitHub cung cấp cho bạn 1 server cài Ubuntu, bạn khai báo rằng muốn xài JDK nào, muốn dùng Ant, thế là có sẵn!!
+Việc của chúng ta là ra lệnh ant trên máy này mà thôi
+
+Tất cả những thứ này đều là khai báo, liệt kê dưới dạng text gửi cho server nó lo, tool nó lo
+File cấu hình - Configuration file .YML .YAML
+bộ câu lệnh ta phải học để ra lệnh cho Tool
+
+giờ ta học bộ lệnh của tool GitHub Actions
+
+-Khi chơi CI/GitHub Actions cần chuẩn bị
+	-Code lưu trên GitHub
+	-Thiết lập quá trình build kèm với cấu hình chạy Unit Test (1005)
+	-Chuẩn bị JDK
+	-Chuẩn bị ANT
+	-Đính kèm các thư viện ta dùng riêng - JUnit jar
+
+>>>> Upload bộ thư viện JUnit lên kho code, lát hồi biên dịch còn có thư viện .jar mà đóng gói
+
+LÀM FILE CẤU HÌNH XIN SERVER, XIN JDK, XIN ANT, RA LỆNH CHO ANT CHẠY FILE BUILD.XML CỦA MÌNH, CHECK GIÙM LUÔN UNIT TEST XANH ĐỎ,
+	-> NẾU XANH THÌ TẠO MỘT NƠI ĐỂ CHỨA FILE .JAR VỪA XUẤT HIỆN, TẠO LINK CHO MỌI NGƯỜI DOWNLOAD .JAR
+	-> NẾU ĐỎ GỬI MAIL CHỬI THẰNG NÀO VỪA PUSH CODE!!!
+GITHUB ACTIONS LÀM GIÙM MÌNH HẾT, MIỄN LÀ MÌNH CHỈ NÓ LÀM!!!
+	CHỈ NÓ LÀM THÌ NẰM TRONG TẬP TIN .YML .YAML
+
+.YML .YAML
+chứa các lệnh kèm tham số để ra lệnh cho GitHub Actions biết phải làm gì
+những lệnh này đã có sẵn, mình chỉ việc học và dùng
+	Đầu tập tin có một lệnh 
+		name <tên của cái workflow này ~ tên project>
+	Dưới là các lệnh khai báo: xin server, xin jdk, gõ ant được gọi chung là các tác vụ job phải hoàn tất
+
+	Mỗi tác vụ cần làm lại có thể được đặt một cái tên
+		step 1:
+			làm những gì 
+			làm những gì
+		step 2:
+			làm những gì 
+			làm những gì
