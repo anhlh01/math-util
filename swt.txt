@@ -1,0 +1,66 @@
+28/2/2022
+TEST CASES - CÁC TÌNH HUỐNG KIỂM THỬ
+	Coi như app đã bắt đầu hoàn thiện, UI ráp với Back-end rồi để ra được cái tính năng - màn hình
+có ô nhập _ nút nhấn để xử lý 1 việc gì đó cho k/h
+	Một tính năng đã có, sau đó cần phải kiểm thử. Ai sẽ làm việc kiểm thử này -
+QC/Tester
+	QC/Tester sẽ cần có app được cái ở đâu đó - Staging, họ chạy app, đưa dât vào theo cách
+nào đó, và học sẽ xem cái giá trị trả về - actual so với expected 
+mà học kì vọng -> có khớp không
+					okie =>
+					không okia => BUG
+* Trong công việc QLDA, reqs, design, code, validation, deployment, mainternance..
+							  QC/Tester
+	QC/Tester cần phải đảm bảo rằng app release được, đưa ra kh xài được 
+họ phải kiểm thử, dùng thử trước theo cách user để đb nếu có expected vs.
+actual không khớp, tìm sớm, chặn trước khi đưa ra cho khách
+	Về mặt QLDA: sếp phải biết chính xác QC/ Tester mày test chưa, lưu lại 
+bằng chứng!!!
+	Dân QC phải ghi lại những gì anh ta đã test phần mềm bằng cách liệt kê
+ra các test case (tình huống)/ test scenario (kịch bản) và trạng thái của chúng
+
+* TEST SCENARIO: kịch bản test ~~~ bạn dự tính test chức năng nào, màn hình nào???
+Kịch bản của tui là tui muốn xem người dùng xài login như thế nào???
+login có rất nhiều tình huống khác nhau, cách dùng khác nhau - TEST CASE
+SCENARIO GỒM NHIỀU CASE
+CASE LÀ NHỮNG TÌNH HUỐNG CỤ THỂ ĐỂ TỔ HỢP NÊN MỘT CÂU CHUYỆN NÀO ĐÓ - LOGIN
+
+LOGIN - SCENARIO - CÂU CHUYỆN LOGIN
+	Tình huống 1 - CASE #1
+		người dùng không nhập user/pass mà nhấn nút login -> kì vọng app phải chửi!!!
+	Tình huống 2 - CASE #2
+		người dùng nhập đúng user/ sai pass, nhấn login -> báo sai pass/ reset pass xh
+	Tình huống 3 - CASE #3
+		sai user/pass không care, -> đăng kí tài khoản
+	Tình huống 4 - CASE #4
+		đúng user/pass -> cho vào app, nhưng phải đảm bảo vào đúng trang/ role
+	Tình huống 5 - CASE #5
+		sai user/pass -> khóa hệ thống lại 1 thời gian
+	Tình huống 6 - CASE #6
+		nhấn nút login = FB, GM -> khóa hệ thống lại 1 thời gian
+Liên quan đến 1 tính năng, có vô số tổ hợp sử dụng tính năng mà người dùng có thể thao tác
+	mỗi bộ dữ liệu đưa vào của user với màn hình -> sẽ ra cách hành xử khác nhau của
+màn hình đó -> CASE/ TÌNH HUỐNG SỬ DỤNG APP
+Dân Tester phải tưởng tượng ra các test cases, chặn/ đoán những tình huống user có thể xài 
+app, kiểu tra cases coi app chạy ổn không,
+
+DÂN QC/ TESTER PHẢI LIỆT KÊ TOÀN BỘ CÁC TEST CASE MÀ ANH TA SẼ DÙNG ĐỂ KIỂM TRA APP
+
+* CÔNG VIỆC CỦA DÂN TESTER
+	Xem cái SRS - cuốn đặc tả yêu cầu phần mềm, xem thêm phần design của app để hiểu app
+	Thiết kế các test cases: đóng vai người dùng, xài app như thế nào: tình huống tử tế
+					/ tình huống cà chớn - thử app
+	Lưu lại các test cases ở đâu đó
+						-EXCEL
+						-CLOUD (TEST RAIL...)
+	Tiến hành test, chạy app theo các tình huống mình đã liệt kê trong file EXCEL
+		TEST RUN, dưa app vào test, kiểm tra xem app có hành xử như dự kiến?
+			- có -> test cases PASSED
+			- không -> test cases FAILED -> BUG
+							        mô tả kĩ tình huống APP BỊ FAILED
+								  MÔ TẢ BUG
+		BUG XH SAU KHI TEST CASE ĐƯỢC THỰC THI
+
+								BUG ĐỂ RIÊNG Ở 1 TOOL KHÁC NƠI DEV CÓ THỂ
+								VÀO ĐỂ XEM, - BUG DATABASE (BUGZZILA~JIRA)
+
